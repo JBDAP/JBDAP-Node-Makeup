@@ -2,7 +2,8 @@
  * 丰富原生 String 类型
  */
 
-const crypto = require('crypto')
+import { EOL } from 'os'
+import crypto from 'crypto'
 
 // 替换全部匹配字符串
 String.prototype.replaceAll = function (s1, s2) {
@@ -17,6 +18,7 @@ String.prototype.replaceAll = function (s1, s2) {
         /\./g,
         /\?/g,
         /\\/g,
+        /\//g,
         /\^/g,
         /\|/g,
         /\(/g,
@@ -33,6 +35,7 @@ String.prototype.replaceAll = function (s1, s2) {
         '\\.',
         '\\?',
         '\\\\',
+        '\\/',
         '\\^',
         '\\|',
         '\\(',
@@ -54,12 +57,12 @@ String.prototype.replaceAll = function (s1, s2) {
 
 // 移除所有空格
 String.prototype.removeBlank = function () {
-    return this.replace(/\ +/g, '')
+    return this.replaceAll(' ', '')
 }
 
 // 移除所有换行符
 String.prototype.removeEOL = function () {
-    return this.replace(/[\r\n]/g, '')
+    return this.replaceAll(EOL, '')
 }
 
 // 直接转 MD5/SHA256
