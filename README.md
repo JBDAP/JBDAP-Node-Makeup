@@ -5,13 +5,13 @@
 ## **Install**
 
 ~~~
-npm install @jbdap/makeup --save
+npm install jbdap-makeup --save
 ~~~
 
 or
 
 ~~~
-yarn add @jbdap/makeup
+yarn add jbdap-makeup
 ~~~
 
 ## **Features**

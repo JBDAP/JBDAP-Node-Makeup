@@ -1,2 +1,2 @@
 
-module.exports = require('./lib/makeup')
+module.exports = require('./lib/makeup.js')
