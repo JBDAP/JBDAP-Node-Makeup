@@ -38,3 +38,7 @@ Date.prototype.timeString = function () {
 Date.prototype.dtString = function () {
     return this.dateString() + ' ' + this.timeString()
 }
+
+Date.prototype.fdtString = function () {
+    return this.dateString() + ' ' + this.timeString() + '.' + this.getMilliseconds().toString().padLeft(3,'0')
+}
